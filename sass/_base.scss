@@ -1,0 +1,59 @@
+
+// Variables //
+$black: #000;
+$trans-black: rgba(0,0,0,.5);
+$white: #fff;
+$trans-white: rgba(255,255,255,.5);
+
+
+//media queries //
+// $bp-massive: 75em; //1200px / 16 = 75
+// $bp-prettyBig: 68.75em; //1100 / 16 = 68.75
+// $bp-medium: 56.25em; //900 / 16
+// $bp-chico: 37.5em; //600 / 16
+// $bp-bienChico: 31.25em; //500
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // padding: 20px;
+  background-color: black;
+  font-family: 'Lora', serif;
+
+  @include respond(phone) {
+    font-size: 37.5%; //
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px, 9/16, width < 1200
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 9px, 8/16, width <
+  }
+
+@include respond(big-desktop) {
+  font-size: 75%; // 1rem = 12, 12/16
+}
+}
+
+
+
+// h1 {
+//   font-size: 9em;
+// }
+//
+// h2 {
+//   font-size: 7em;
+// }
