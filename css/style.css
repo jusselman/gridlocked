@@ -10,15 +10,11 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  padding: 20px;
   background-color: black;
   font-family: 'Lora', serif; }
-
-h1 {
-  font-size: 9em; }
-
-h2 {
-  font-size: 7em; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 37.5%; } }
 
 .container {
   background-color: #000;
@@ -48,7 +44,11 @@ h2 {
       align-items: center;
       display: flex;
       justify-content: center;
-      transition: all .3s; }
+      transition: all 0.3s;
+      font-size: 7rem; }
+      @media (max-width: 600px) {
+        .container .header__title {
+          font-size: 2rem !important; } }
     .container .header__title:hover {
       transform: skew(10deg);
       font-size: 9.25rem; }
@@ -68,20 +68,22 @@ h2 {
       background-image: url("https://images.pexels.com/photos/206527/pexels-photo-206527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); }
     .container .small-box--1, .container .small-box--2, .container .small-box--3 {
       transform: scale(1);
-      transition: all .3s;
+      transition: all 0.3s;
       -webkit-filter: grayscale(0);
       /* Safari 6.0 - 9.0 */
       filter: grayscale(0); }
       .container .small-box--1__title, .container .small-box--2__title, .container .small-box--3__title {
         transform: scale(1);
-        transition: all .3s; }
+        transition: all 0.3s; }
     .container .small-box--1:hover, .container .small-box--2:hover, .container .small-box--3:hover {
       transform: scale(0.9);
       -webkit-filter: grayscale(100%);
       /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
       border-radius: 5%; }
-    .container .small-box--1:hover h2, .container .small-box--2:hover h2, .container .small-box--3:hover h2 {
+    .container .small-box--1:hover h2,
+    .container .small-box--2:hover h2,
+    .container .small-box--3:hover h2 {
       transform: scale(1.5);
       color: rgba(255, 255, 255, 0.9); }
   .container .sidebar {
@@ -94,3 +96,20 @@ h2 {
   .container .footer {
     background-image: url("https://images.pexels.com/photos/206563/pexels-photo-206563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     grid-column: 1 / -1; }
+
+/*
+- phone
+- tab-port
+- tab-land 
+- big-desktop 
+*/
+.bg-video__content {
+  width: 100%; }
+
+.video-header {
+  z-index: 99;
+  margin: 10rem auto;
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 7rem; }
